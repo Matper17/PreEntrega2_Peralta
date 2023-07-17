@@ -9,6 +9,7 @@ export const ItemDetail = ({item}) => {
                 <h3 className="titulo"> {item.nombre} </h3>
                 <p className="descripcion"> {item.desc} </p>
                 <p className="descripcion"> {item.marca} </p>
+                <p className="descripcion"> {item.modelo} </p>
                 <p className="descripcion"> ${item.precio} </p>
             </div>
         </div>

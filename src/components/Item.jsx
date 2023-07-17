@@ -8,6 +8,7 @@ export const Item = ({producto}) => {
         <div>
             <h4>{producto.categoria}</h4>
             <p>Marca: {producto.marca}</p>
+            <p>Modelo: {producto.modelo}</p>
             <p>Precio: ${producto.precio}</p>
             <Link className='ver-mas' to={`/Item/${producto.id}`}> Ver más </Link>
         </div>
