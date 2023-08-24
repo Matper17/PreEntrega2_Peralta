@@ -19,6 +19,7 @@ const Checkout = () => {
             productos: carrito,
             total: precioTotal()
         }
+        console.log(pedido);
 
         const pedidosRef = collection(db, "pedidos");
 
@@ -47,7 +48,6 @@ const Checkout = () => {
             <input type="text" placeholder="Ingresá tu nombre" {...register("nombre")} />
             <input type="email" placeholder="Ingresá tu e-mail" {...register("email")} />
             <input type="phone" placeholder="Ingresá tu teléfono" {...register("telefono")} />
-
 
             <button className="enviar" type="submit">Comprar</button>
 
