@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import {doc, getDoc} from "firebase/firestore"
 import { db } from "../firebase/config";
 
-export const ItemDetailContainer = () => {
+const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
   const id = useParams().id; 
   useEffect(() =>{
@@ -22,5 +22,4 @@ export const ItemDetailContainer = () => {
     </div>
   )
 }
-
-// export default ItemDetailContainer; 
+export default ItemDetailContainer; 
