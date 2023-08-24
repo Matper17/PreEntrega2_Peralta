@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import { collection, addDoc } from "firebase/firestore"
 import { db } from '../firebase/config'
 
-const CheckOut = () => {
+const Checkout = () => {
 
     
     const [pedidoId, setPedidoId] = useState("");
@@ -19,7 +19,6 @@ const CheckOut = () => {
             productos: carrito,
             total: precioTotal()
         }
-        console.log(pedido);
 
         const pedidosRef = collection(db, "pedidos");
 
@@ -49,6 +48,7 @@ const CheckOut = () => {
             <input type="email" placeholder="Ingresá tu e-mail" {...register("email")} />
             <input type="phone" placeholder="Ingresá tu teléfono" {...register("telefono")} />
 
+
             <button className="enviar" type="submit">Comprar</button>
 
         </form>
@@ -56,4 +56,4 @@ const CheckOut = () => {
   )
 }
 
-export default CheckOut; 
+export default Checkout; 

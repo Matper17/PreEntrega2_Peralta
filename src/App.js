@@ -1,5 +1,5 @@
 import Carrito from "./components/Carrito";
-import CheckOut from "./components/CheckOut";
+import Checkout from "./components/Checkout";
 import Contacto from "./components/Contacto";
 //import { CartWidget } from "./components/CartWidget";
 import { ItemDetailContainer } from "./components/ItemDetailContainer";
@@ -26,7 +26,7 @@ function App() {
         <Route path="/productos/:categoria" element={<ItemListContainer/>}/>
         <Route path="/contacto" element={<Contacto/>}/>
         <Route path="/carrito" element={<Carrito/>}/>
-        <Route path="/checkout" element={<CheckOut/>}/>
+        <Route path="/checkout" element={<Checkout/>}/>
       </Routes>
 
       

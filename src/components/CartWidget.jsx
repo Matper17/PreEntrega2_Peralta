@@ -9,7 +9,7 @@ const CartWidget = () => {
   return (
     <div>
         <Link className="menu-link" to="/carrito">
-            <i class="bi bi-cart2"></i>
+        <i class="bi bi-cart2"> </i>
             <span className="numerito">{cantidadEnCarrito()}</span>
         </Link>
     </div>

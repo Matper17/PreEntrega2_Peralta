@@ -20,9 +20,8 @@ const Carrito = () => {
                 <div key={producto.id}>
                     <br />
                     <h3>{producto.titulo}</h3>
-                    <p>Precio unitario: ${producto.precio}</p>
-                    <p>Precio total: ${producto.precio * producto.cantidad}</p>
-                    <p>Cantidad: {producto.cantidad}</p>
+                    <p>Precio total: ${producto.precio}</p>
+                    {/*<p>Cantidad: {producto.cantidad}</p>*/}
                     <br />
                 </div>
             ))
