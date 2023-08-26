@@ -1,7 +1,7 @@
 import Contacto from "./components/Contacto";
 //import { CartWidget } from "./components/CartWidget";
 import  ItemDetailContainer  from "./components/ItemDetailContainer";
-import { ItemListContainer } from "./components/ItemListContainer";
+import  ItemListContainer  from "./components/ItemListContainer";
 import Navbar from "./components/Navbar";
 import "./index.css"; 
 import { BrowserRouter, Route, Routes } from "react-router-dom";

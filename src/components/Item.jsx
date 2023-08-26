@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 //import { toCapital } from '../helpers/toCapital'
 
-export const Item = ({producto}) => {
+const Item = ({producto}) => {
   return (
     <div className='producto'>
         <img src= {producto.imagen} alt="Imagen no encontrada"/>
         <div>
-            <h4>{producto.tipo}</h4>
+            <h4>{producto.categoria}</h4>
             <p>Marca: {producto.marca}</p>
             <p>Modelo: {producto.modelo}</p>
             <p>Precio: ${producto.precio}</p>
@@ -17,4 +17,4 @@ export const Item = ({producto}) => {
     </div>
   )
 }
-
+export default Item; 

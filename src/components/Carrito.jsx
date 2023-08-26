@@ -3,6 +3,8 @@ import { CartContext } from '../context/CartContext'
 import { Link } from 'react-router-dom';
 
 
+
+
 const Carrito = () => {
 
     const { carrito, precioTotal, vaciarCarrito } = useContext(CartContext);
@@ -13,15 +15,17 @@ const Carrito = () => {
 
   return (
     <div className="container">
-        <h1 className="main-title">Carrito</h1>
-
+        {/*<h1 className="main-title">Carrito</h1>*/}
+        <br/>
         {
-            carrito.map((producto) => (
-                <div key={producto.id}>
+            carrito.map((prod) => (
+                <div key={prod.id}>
+                    <img src= {prod.imagen} alt="Imagen no encontrada"/>
                     <br />
-                    <h3>{producto.titulo}</h3>
-                    <p>Precio total: ${producto.precio}</p>
-                    {/*<p>Cantidad: {producto.cantidad}</p>*/}
+                    <br />
+                    <h3>{prod.marca}</h3>
+                    <p>Precio: ${prod.precio}</p>
+                    {/*<p>Precio total: ${prod.precio * prod.cantidad}</p>*/}
                     <br />
                 </div>
             ))
@@ -31,10 +35,14 @@ const Carrito = () => {
             carrito.length > 0 ?
             <>
                 <h2>Precio total: ${precioTotal()}</h2>
-                <button onClick={handleVaciar}>Vaciar</button>
-                <Link to="/checkout">Finalizar compra</Link>
+                <br/>
+                <button className='btn btn-secondary' onClick={handleVaciar}>Vaciar</button>
+                <br/>
+                <br/>
+                <Link className='btn btn-secondary' to="/checkout">Finalizar compra</Link>
+                <br/>
             </> :
-            <h2>El carrito está vacío :(</h2>
+            <h2>El carrito está vacío <i className="bi bi-cart-x-fill"></i></h2>
         }
         
     </div>
