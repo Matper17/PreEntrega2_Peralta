@@ -5,7 +5,7 @@ const Contacto = () => {
     const { register, handleSubmit } = useForm();
 
     const enviar = (data) => {
-        console.log(data);
+      handleSubmit();
     }
 
   return (
@@ -19,7 +19,7 @@ const Contacto = () => {
             <input type="phone" placeholder="Ingresá tu teléfono" {...register("telefono")} />
             <input type="text" placeholder="Ingresá tu comentario" {...register("comentario")} />
 
-            <button className="enviar" type="submit">Enviar</button>
+            <button className="enviar" onClick={handleSubmit}>Enviar</button>
 
         </form>
     </div>

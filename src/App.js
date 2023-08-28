@@ -1,5 +1,4 @@
 import Contacto from "./components/Contacto";
-//import { CartWidget } from "./components/CartWidget";
 import  ItemDetailContainer  from "./components/ItemDetailContainer";
 import  ItemListContainer  from "./components/ItemListContainer";
 import Navbar from "./components/Navbar";
@@ -13,7 +12,7 @@ import Checkout from "./components/Checkout";
 function App() {
 
   return (
-
+    
       <CartProvider>
       <BrowserRouter>
       
@@ -29,7 +28,6 @@ function App() {
         <Route path="/checkout" element={<Checkout/>}/>
       </Routes>
 
-      
       </BrowserRouter>
       </CartProvider>
   );
