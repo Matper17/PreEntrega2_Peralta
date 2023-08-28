@@ -17,9 +17,12 @@ const Carrito = () => {
                 <div key={prod.id}>
                     <br />
                     <h3>{prod.titulo}</h3>
-                    <p>Precio unitario: ${prod.precio}</p>
-                    <p>Precio total: ${prod.precio * prod.cantidad}</p>
-                    <p>Cant: {prod.cantidad}</p>
+                    <img className='imagen-carrito' src={prod.imagen} alt=""/>
+                    <p className='precio'>{prod.marca}</p>
+                    <p className='precio'>{prod.modelo}</p>
+                    <p className='precio'>Precio unitario US${prod.precio}</p>
+                    <p className='precio'>Precio total US${prod.precio * prod.cantidad}</p>
+                    <p className='precio'>Cant: {prod.cantidad}</p>
                     <br />
                 </div>
             ))
@@ -28,7 +31,7 @@ const Carrito = () => {
         {  
             carrito.length > 0 ?
             <>
-                <h2>Precio total: ${precioTotal()}</h2>
+                <h2>Precio total: US${precioTotal()}</h2>
                 <button className="btn btn-secondary" onClick={handleVaciar}>Vaciar</button>
                 <br/>
                 <br/>
