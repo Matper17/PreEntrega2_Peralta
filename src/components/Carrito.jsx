@@ -18,7 +18,7 @@ const Carrito = () => {
                     <br />
                     <h3>{prod.titulo}</h3>
                     <img className='imagen-carrito' src={prod.imagen} alt=""/>
-                    <p className='precio'>{prod.marca}</p>
+                    <p className='titulo'>{prod.marca}</p>
                     <p className='precio'>{prod.modelo}</p>
                     <p className='precio'>Precio unitario US${prod.precio}</p>
                     <p className='precio'>Precio total US${prod.precio * prod.cantidad}</p>
