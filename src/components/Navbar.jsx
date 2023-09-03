@@ -8,9 +8,9 @@ const Navbar = () => {
     <nav className="navbar">
         <ul className="menu">
             <li><Link className="menu-link" to="/">Inicio</Link></li>
-            <li><Link className="menu-link" to="/productos">Productos</Link></li>
-            <li><Link className="menu-link" to="/productos/autos">Autos</Link></li>
-            <li><Link className="menu-link" to="/productos/motos">Motos</Link></li>
+            {/*<li><Link className="menu-link" to="/productos">Productos</Link></li>*/}
+            <li><Link className="menu-link" to="/productos/Auto">Autos</Link></li>
+            <li><Link className="menu-link" to="/productos/Moto">Motos</Link></li>
             <li><Link className="menu-link" to="/contacto">Contacto</Link></li>
             <li><CartWidget/></li>
         </ul>

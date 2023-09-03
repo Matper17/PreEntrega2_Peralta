@@ -8,31 +8,36 @@ const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
 
-    const [tipo] = useState("Productos");
+    const [id] = useState("Productos");
 
     const categoria = useParams().categoria;
 
     useEffect(() => {
-
       const productosRef = collection(db, "Productos");
-      const q = categoria ? query(productosRef, where("categoria", "==", categoria)) : productosRef;
-
+      let q;
+    
+      if (categoria) {
+        q = query(productosRef, where("categoria", "==", categoria));
+      } else {
+        q = productosRef; // Sin filtro de categoría
+      }
+    
       getDocs(q)
         .then((resp) => {
-
           setProductos(
             resp.docs.map((doc) => {
-              return { ...doc.data(), id: doc.id }
+              return { ...doc.data(), id: doc.id };
             })
-          )
+          );
         })
-        
-    }, [categoria])
-    
-    
+        .catch((error) => {
+          console.error("Error al obtener productos:", error);
+        });
+    }, [categoria]);
+     
   return (
     <div>
-        <ItemList productos={productos} titulo={tipo} />
+        <ItemList productos={productos} titulo={id} />
     </div>
   )
 }
