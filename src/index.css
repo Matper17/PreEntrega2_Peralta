@@ -26,7 +26,6 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--clr-main);
-  border-bottom: 3px solid #353535;
 }
 
 .logo {
@@ -38,17 +37,21 @@
   list-style-type: none;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1rem; 
 }
 
 .menu-link {
   text-decoration: none;
   color: rgb(255, 253, 253);
   font-size: 1.2rem;
+  margin-right: 20px; 
+  transition: transform 0.3s, color 0.3s;
 }
 
 .menu-link:hover {
-  text-decoration: underline;
+  transform: scale(1.1); 
+  color: #47413f; 
+  cursor: pointer; 
 }
 
 .productos {
