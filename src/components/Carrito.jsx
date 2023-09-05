@@ -38,7 +38,7 @@ const Carrito = () => {
                 <Link className="btn btn-success" to="/checkout">Finalizar compra</Link>
             </> :
             
-            <h2>El carrito está vacío <i class="bi bi-cart-x"></i> </h2>
+            <h2>El carrito está vacío <i className="bi bi-cart-x"></i> </h2>
         }
         
     </div>

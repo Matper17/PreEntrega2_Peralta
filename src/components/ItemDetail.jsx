@@ -14,7 +14,7 @@ const ItemDetail = ( {item} ) => {
     }
 
     const handleSumar = () => {
-        cantidad < item.stock && setCantidad(cantidad + 1)
+        cantidad < item.cantidad && setCantidad(cantidad + 1)
     }
 
   return (
